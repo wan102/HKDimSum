@@ -1,5 +1,8 @@
 package com.example.hkdimsum.ui.home
 
+import android.location.Geocoder
+import android.location.Location
+import android.location.LocationRequest
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,13 +12,27 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.hkdimsum.R
 import com.example.hkdimsum.databinding.FragmentHomeBinding
+import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 
 class HomeFragment : Fragment() {
+
+    private lateinit var mMap: GoogleMap
+
+    // member variables that hold location info
+    protected var mLastLocation: Location? = null
+    protected var mLocationRequest: LocationRequest? = null
+    protected var mGeocoder: Geocoder? = null
+    protected var mLocationProvider: FusedLocationProviderClient? = null
+
+    companion object {
+        var REQUEST_LOCATION = 1
+    }
 
     private var _binding: FragmentHomeBinding? = null
 
