@@ -17,7 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HKDimSum"
         tools:targetApi="31">
-
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 
@@ -31,7 +33,7 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyASF75iBRUkEErPPPNbb08rZhcdYviXsxk" />
+            android:value="${MAPS_API_KEY}" />
 
         <activity
             android:name=".MainActivity"
@@ -44,4 +46,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>
