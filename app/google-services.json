@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "515648321658",
+    "project_id": "hkdimsum",
+    "storage_bucket": "hkdimsum.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:515648321658:android:0f7f3d59975f51908523c3",
+        "android_client_info": {
+          "package_name": "com.example.hkdimsum"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "515648321658-gdiionj9atlimj0g94m7pn0502k6r5v4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hkdimsum",
+            "certificate_hash": "a23c289f685e89f40fa3863006cb805ad92edf8d"
+          }
+        },
+        {
+          "client_id": "515648321658-40lar6q3kj4g85righ872r7cihd4ju3e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASF75iBRUkEErPPPNbb08rZhcdYviXsxk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "515648321658-40lar6q3kj4g85righ872r7cihd4ju3e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
