@@ -83,10 +83,11 @@ class DashboardFragment(private val userList: ArrayList<DimsumData>) :
 
     override fun getItemCount(): Int {
         TODO("Not yet implemented")
+        return userList.size
     }
+}
 
 //    override fun onDestroyView() {
 //        super.onDestroyView()
 //        _binding = null
 //    }
-}
