@@ -1,45 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/beverage_rowitem"
+    android:id="@+id/recycelview_rowitem"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/cr_image"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_margin="8dp"
-        android:contentDescription="mt_content_description"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+    <TextView
+        android:id="@+id/cr_name"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="20dp"
+        android:text="cantonese restaurant Name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/cr_image"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/cr_name"
-        android:layout_width="173dp"
-        android:layout_height="46dp"
-        android:layout_margin="8dp"
-        android:layout_marginStart="8dp"
-        android:text="mt1_name"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cr_image"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.114" />
-
-    <TextView
         android:id="@+id/cr_address"
-        android:layout_width="270dp"
-        android:layout_height="39dp"
-        android:layout_margin="8dp"
-        android:layout_marginStart="8dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        android:textSize="14sp"
+        android:layout_width="263dp"
+        android:layout_height="141dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cr_image"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cr_name"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.384" />
+
+    <ImageView
+        android:id="@+id/cr_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="13dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cr_address"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
