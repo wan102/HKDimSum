@@ -71,7 +71,7 @@ class HomeFragment : Fragment() {
 //        }
 
         return inflater.inflate(R.layout.fragment_home, container, false)
-//        return root
+        return root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
