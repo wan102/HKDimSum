@@ -7,10 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
+import com.example.hkdimsum.ui.dashboard.DashboardFragment
+import com.google.firebase.database.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -50,8 +48,8 @@ class YumchaFragment : Fragment() {
     private fun getUserData() {
 
         dbref =
-            FirebaseDatabase.getInstance("https://androidassignment-db6e1-default-rtdb.asia-southeast1.firebasedatabase.app")
-                .getReference("cafes")
+            FirebaseDatabase.getInstance("https://hkdimsum-default-rtdb.firebaseio.com/")
+                .getReference("cantoneserestaurants")
 
         dbref.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -60,7 +58,7 @@ class YumchaFragment : Fragment() {
                         val cafe = dataSnapshot.getValue(DimsumData::class.java)
                         userArrayList.add(cafe!!)
                     }
-                    userRecyclerview.adapter = YumchaAdpater(userArrayList)
+                    userRecyclerview.adapter = DashboardFragment(userArrayList)
                 }
             }
 
