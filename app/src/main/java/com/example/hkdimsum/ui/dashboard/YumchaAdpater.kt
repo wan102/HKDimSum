@@ -6,10 +6,11 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.hkdimsum.ui.dashboard.DimsumData
 import com.squareup.picasso.Picasso
 
-class YumchaAdpater(private val courseList: ArrayList<DimsumData>) :
-    RecyclerView.Adapter<YumchaAdpater.MyViewHolder>() {
+class YumchaAdapter(private val restaurantList: ArrayList<DimsumData>) :
+    RecyclerView.Adapter<YumchaAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
@@ -22,7 +23,7 @@ class YumchaAdpater(private val courseList: ArrayList<DimsumData>) :
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
 
-        val getdatabaseInfo = courseList[position]
+        val getdatabaseInfo = restaurantList[position]
 
         holder.name.text = getdatabaseInfo.name
         holder.address.text = getdatabaseInfo.address
@@ -39,6 +40,6 @@ class YumchaAdpater(private val courseList: ArrayList<DimsumData>) :
     }
 
     override fun getItemCount(): Int {
-        return courseList.size
+        return restaurantList.size
     }
 }

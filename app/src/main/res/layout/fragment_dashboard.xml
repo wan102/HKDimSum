@@ -12,5 +12,5 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="LinearLayoutManager"
-        tools:listitem="recycleview_rowitem" />
+        tools:listitem="@layout/recycleview_rowitem" />
 </androidx.constraintlayout.widget.ConstraintLayout>

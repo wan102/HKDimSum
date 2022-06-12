@@ -5,12 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.hkdimsum.DimsumData
 import com.example.hkdimsum.R
-import com.example.hkdimsum.YumchaAdpater
+import com.example.hkdimsum.YumchaAdapter
 import com.example.hkdimsum.databinding.FragmentDashboardBinding
 import com.google.firebase.database.*
 
@@ -68,10 +66,10 @@ class DashboardFragment : Fragment() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
                     for (dataSnapshot in snapshot.children) {
-                        val cafe = dataSnapshot.getValue(DimsumData::class.java)
-                        userArrayList.add(cafe!!)
+                        val cantoneserestaurants = dataSnapshot.getValue(DimsumData::class.java)
+                        userArrayList.add(cantoneserestaurants!!)
                     }
-                    userRecyclerview.adapter = YumchaAdpater(userArrayList)
+                    userRecyclerview.adapter = YumchaAdapter(userArrayList)
                 }
             }
 

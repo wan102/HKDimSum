@@ -1,4 +1,4 @@
-package com.example.hkdimsum
+package com.example.hkdimsum.ui.dashboard
 
 data class DimsumData(
     var name: String? = null,
