@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/mt_image"
+        android:id="@+id/cr_image"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_margin="8dp"
@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/mt_name"
+        android:id="@+id/cr_name"
         android:layout_width="173dp"
         android:layout_height="46dp"
         android:layout_margin="8dp"
@@ -26,12 +26,12 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/mt_image"
+        app:layout_constraintStart_toEndOf="@+id/cr_image"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.114" />
 
     <TextView
-        android:id="@+id/mt_desc"
+        android:id="@+id/cr_address"
         android:layout_width="270dp"
         android:layout_height="39dp"
         android:layout_margin="8dp"
@@ -39,7 +39,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/mt_image"
-        app:layout_constraintTop_toBottomOf="@+id/mt_name"
+        app:layout_constraintStart_toEndOf="@+id/cr_image"
+        app:layout_constraintTop_toBottomOf="@+id/cr_name"
         app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

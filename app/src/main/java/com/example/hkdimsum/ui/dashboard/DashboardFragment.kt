@@ -11,83 +11,38 @@ import com.example.hkdimsum.DimsumData
 import com.example.hkdimsum.R
 import com.squareup.picasso.Picasso
 
-//class DashboardFragment : Fragment() {
-//
-//    private var _binding: FragmentDashboardBinding? = null
-//
-//    // This property is only valid between onCreateView and
-//    // onDestroyView.
-//    private val binding get() = _binding!!
-//
-//    override fun onCreateView(
-//        inflater: LayoutInflater,
-//        container: ViewGroup?,
-//        savedInstanceState: Bundle?
-//    ): View {
-//        val dashboardViewModel =
-//            ViewModelProvider(this).get(DashboardViewModel::class.java)
-//
-//        _binding = FragmentDashboardBinding.inflate(inflater, container, false)
-//        val root: View = binding.root
-//
-//        val textView: TextView = binding.textDashboard
-//        dashboardViewModel.text.observe(viewLifecycleOwner) {
-//            textView.text = it
-//        }
-//        return root
-//    }
-//
-//    override fun onDestroyView() {
-//        super.onDestroyView()
-//        _binding = null
-//    }
-//}
-
-class DashboardFragment(private val userList: ArrayList<DimsumData>) :
+class DashboardFragment(private val courseList: ArrayList<DimsumData>) :
     RecyclerView.Adapter<DashboardFragment.MyViewHolder>() {
-
-    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
-        val name: TextView = itemView.findViewById(R.id.mt_name)
-        val desc: TextView = itemView.findViewById(R.id.mt_desc)
-        val img: ImageView = itemView.findViewById(R.id.mt_image)
-
-    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
-        val itemView = LayoutInflater.from(parent.context).inflate(
+        val dataView = LayoutInflater.from(parent.context).inflate(
             R.layout.recycleview_rowitem,
             parent, false
         )
-        return MyViewHolder(itemView)
+        return MyViewHolder(dataView)
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
 
-        val currentitem = userList[position]
+        val getdatabaseInfo = courseList[position]
 
-        holder.name.text = currentitem.name
-        holder.desc.text = currentitem.desc
-        val imageTarget = currentitem.img
+        holder.name.text = getdatabaseInfo.name
+        holder.address.text = getdatabaseInfo.address
+        val imageTarget = getdatabaseInfo.img
         Picasso.get().load(imageTarget).into(holder.img)
+    }
 
-//        class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-//
-//            val name: TextView = itemView.findViewById(R.id.mt_name)
-//            val desc: TextView = itemView.findViewById(R.id.mt_desc)
-//            val img: ImageView = itemView.findViewById(R.id.mt_image)
-//
-//        }
+    class MyViewHolder(dataView: View) : RecyclerView.ViewHolder(dataView) {
+
+        val img: ImageView = dataView.findViewById(R.id.cr_image)
+        val name: TextView = dataView.findViewById(R.id.cr_name)
+        val address: TextView = dataView.findViewById(R.id.cr_address)
+
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
-        return userList.size
+
+        return courseList.size
     }
 }
-
-//    override fun onDestroyView() {
-//        super.onDestroyView()
-//        _binding = null
-//    }
