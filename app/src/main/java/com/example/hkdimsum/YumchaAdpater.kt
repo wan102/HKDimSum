@@ -7,8 +7,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
-import com.squareup.picasso.Picasso.get
-import java.util.ArrayList
 
 class YumchaAdpater(private val courseList: ArrayList<DimsumData>) :
     RecyclerView.Adapter<YumchaAdpater.MyViewHolder>() {
@@ -20,7 +18,6 @@ class YumchaAdpater(private val courseList: ArrayList<DimsumData>) :
             parent, false
         )
         return MyViewHolder(dataView)
-
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
@@ -42,8 +39,6 @@ class YumchaAdpater(private val courseList: ArrayList<DimsumData>) :
     }
 
     override fun getItemCount(): Int {
-
         return courseList.size
     }
-
 }

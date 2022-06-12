@@ -43,7 +43,7 @@ class DashboardFragment : Fragment() {
 //        }
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_dashboard, container, false)
-        return root
+//        return root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
