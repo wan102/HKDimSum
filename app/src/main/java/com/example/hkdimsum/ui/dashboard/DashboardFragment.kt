@@ -46,6 +46,14 @@ import com.squareup.picasso.Picasso
 class DashboardFragment(private val userList: ArrayList<DimsumData>) :
     RecyclerView.Adapter<DashboardFragment.MyViewHolder>() {
 
+    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+        val name: TextView = itemView.findViewById(R.id.mt_name)
+        val desc: TextView = itemView.findViewById(R.id.mt_desc)
+        val img: ImageView = itemView.findViewById(R.id.mt_image)
+
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
         val itemView = LayoutInflater.from(parent.context).inflate(
@@ -64,14 +72,13 @@ class DashboardFragment(private val userList: ArrayList<DimsumData>) :
         val imageTarget = currentitem.img
         Picasso.get().load(imageTarget).into(holder.img)
 
-
-        class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
-            val name: TextView = itemView.findViewById(R.id.mt_name)
-            val desc: TextView = itemView.findViewById(R.id.mt_desc)
-            val img: ImageView = itemView.findViewById(R.id.mt_image)
-
-        }
+//        class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+//
+//            val name: TextView = itemView.findViewById(R.id.mt_name)
+//            val desc: TextView = itemView.findViewById(R.id.mt_desc)
+//            val img: ImageView = itemView.findViewById(R.id.mt_image)
+//
+//        }
     }
 
     override fun getItemCount(): Int {
