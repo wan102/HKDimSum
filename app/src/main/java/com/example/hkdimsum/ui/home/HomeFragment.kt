@@ -59,11 +59,11 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
+//        val homeViewModel =
+//            ViewModelProvider(this).get(HomeViewModel::class.java)
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+//        val root: View = binding.root
 
 //        val textView: TextView = binding.textHome
 //        homeViewModel.text.observe(viewLifecycleOwner) {
@@ -71,7 +71,7 @@ class HomeFragment : Fragment() {
 //        }
 
         return inflater.inflate(R.layout.fragment_home, container, false)
-        return root
+//        return root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
